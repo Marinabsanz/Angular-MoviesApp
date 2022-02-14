@@ -1,3 +1,23 @@
+
+
+
+diseño responsive 
+- Usar la internacionalización con ngx-translate o @ngneat/transloco. Sólo español.
+- Hay que tratar los estados loading (skeleton loader, spinner, progressbar, ...) y de error
+en las llamadas backend.
+
+
+
+Puntos extra (opcionales)
+- Tratar la información mediante State Management. Puedes usar redux con NgRx,
+BehaviorSubjects, Akita, … Con lo que te sientas más cómodo.
+- Testing unitario e integración con Jest o con Karma+Jasmine. Testing e2e con Cypress.
+- Utilizar una metodología CSS (BEM, Utility (TailwindCSS), …)
+- Suponiendo que esta página tiene un número elevado de usuarios simultáneos,
+implementa las mejoras que consideres oportunas para evitar la saturación del servidor
+
+
+
 # Angularmovies
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.

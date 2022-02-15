@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,20 +8,16 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'angularmovies';
-  open = false;
 
-  readonly webApis = ['MovieCard', 'New Movie', 'Movie Details'];
- 
-    readonly tinkoff = [
-        'Actors List',
-        
-    ];
- 
- 
+
+
+  public appPages = [{ title: 'Películas', url: '/movies' }];
+
+  readonly moviesOptions = ['Añadir Nueva Película', 'Listado Películas'];
+  readonly tinkoff = ['Listado de Actores'];
+
+  open = true;
   toggle(open: boolean) {
-      this.open = open;
+    this.open = open;
   }
-  
- 
 }

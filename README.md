@@ -1,6 +1,5 @@
 
 
-
 diseño responsive 
 - Usar la internacionalización con ngx-translate o @ngneat/transloco. Sólo español.
 - Hay que tratar los estados loading (skeleton loader, spinner, progressbar, ...) y de error

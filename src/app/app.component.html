@@ -1,60 +1,45 @@
 <tui-root>
-  <h1> MOVIES APP</h1>
-  <h3>Probando con taiga</h3>
-	
-  <button
-    tuiButton
-    type="button"
-    (click)="toggle(true)"
-    (tuiActiveZoneChange)="toggle($event)"
->
-   Menú
-   
-    <div *tuiSidebar="open; direction: 'left'">
+  <ng-container ngProjectAs="tuiOverContent">
+    <h1 tui-text_h2>MOVIES APP</h1>
+    <h3>Busca por películas, actores o por estudios</h3>
+
+    <button
+      tuiButton
+      type="button"
+      class="button-menu"
+      (click)="toggle(true)"
+      (tuiActiveZoneChange)="toggle($event)"
+    >
+      Menú
+
+      <div *tuiSidebar="open; direction: 'left'">
+        <h1>Menú</h1>
         <tui-accordion [rounded]="false">
-            <tui-accordion-item borders="top-bottom">
-                Películas
-                <ng-template tuiAccordionItemContent>
-                    <a
-                        *ngFor="let link of webApis"
-                        tuiLink
-                        target="_blank"
-                        href="https://github.com/ng-web-apis/{{link}}"
-                        class="link"
-                    >
-                        {{link}}
-                    </a>
-                </ng-template>
-            </tui-accordion-item>
-            <tui-accordion-item borders="top-bottom">
-                Actores
-                <ng-template tuiAccordionItemContent>
-                    <a
-                        *ngFor="let link of tinkoff"
-                        tuiLink
-                        target="_blank"
-                        href="https://github.com/tinkoff/{{link}}"
-                        class="link"
-                    >
-                        {{link}}
-                    </a>
-                </ng-template>
-            </tui-accordion-item>
-            <tui-accordion-item borders="top-bottom">
-              Estudios
-              <ng-template tuiAccordionItemContent>
-                  <a
-                      *ngFor="let link of tinkoff"
-                      tuiLink
-                      target="_blank"
-                      href="https://github.com/tinkoff/{{link}}"
-                      class="link"
-                  >
-                      {{link}}
-                  </a>
-              </ng-template>
+          <tui-accordion-item borders="top-bottom">
+            Películas
+            <ng-template tuiAccordionItemContent>
+              <a
+                *ngFor="let movies of moviesOptions"
+                tuiLink
+                target="_blank"
+                [routerLink]="movies"
+                class="link"
+              >
+                <li>{{ movies}}</li>
+              </a>
+            </ng-template>
+          </tui-accordion-item>
+          <tui-accordion-item borders="top-bottom">
+            Actores
+            <ng-template tuiAccordionItemContent> </ng-template>
+          </tui-accordion-item>
+          <tui-accordion-item borders="top-bottom">
+            Estudios
+            <ng-template tuiAccordionItemContent> </ng-template>
           </tui-accordion-item>
         </tui-accordion>
-    </div>
-</button>
+      </div>
+    </button>
+  </ng-container>
+
 </tui-root>

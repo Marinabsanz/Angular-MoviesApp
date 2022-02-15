@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesPageComponent } from './features/movies/movies-page/movies-page.component';
 import { CompaniesComponent } from './features/companies/companies.component';
-import { NewMovieComponent } from './features/new-movie/new-movie.component';
+import { NewMovieComponent } from './features/movies/new-movie/new-movie.component';
 
 ///Taiga
 

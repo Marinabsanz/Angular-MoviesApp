@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-import { MoviesPageComponent } from './movies-page/movies-page.component';
+import { MoviesPageComponent } from '../movies-page/movies-page.component';
+
 
 const routes: Routes= [
 
@@ -13,17 +14,16 @@ const routes: Routes= [
 }
 ]
 
-
-//meter paths de new movie  y de details
-
-
 @NgModule({
     declarations: [
       
     ],
     imports: [
-      CommonModule
-    ]
+      CommonModule,
+      RouterModule.forChild(routes),
+    ],
+
+    exports:[RouterModule]
   })
 
 

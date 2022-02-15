@@ -6,23 +6,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //material
 
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { MoviesRoutingModule } from './movies-routing.module';
 
 @NgModule({
-  declarations: [
-    MovieDetailsComponent,
-   
-  ],
+  declarations: [MovieDetailsComponent],
   imports: [
-    CommonModule, SharedModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, 
- 
+    MoviesRoutingModule,
+    CommonModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
   ],
-
-  exports: [
-    MovieDetailsComponent,
-   
-  ]
+  exports: [MovieDetailsComponent],
 })
-export class MoviesModule { }
+export class MoviesModule {}
